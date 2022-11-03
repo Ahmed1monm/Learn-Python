@@ -6,7 +6,8 @@ client_socket = socket.socket(socket.AF_INET,
                               socket.SOCK_DGRAM  # ? UDP
                               )
 message = input("Enter lowercase message")
-client_socket.sendto(message.encode("UTF-8"), (server_name, server_port))
+client_socket.sendto(message.encode("UTF-8"), (server_name, #? if it takes name => Will make DNS, if IP will work directly + والله ما فاهم
+                                         server_port))
 data, client_address = client_socket.recvfrom(2048)
 print(data.decode('UTF-8'))
 client_socket.close()
